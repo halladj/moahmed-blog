@@ -1,8 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: halladj/moahmed-blog
   branch: main
-
-local_backend: true
 
 media_folder: static/images
 public_folder: /images

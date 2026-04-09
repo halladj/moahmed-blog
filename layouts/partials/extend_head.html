@@ -1,18 +1,1 @@
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  // Immediately open the widget if there's an identity token in the URL
-  (function() {
-    var hash = document.location.hash;
-    if (hash && (hash.indexOf("invite_token") !== -1 ||
-                 hash.indexOf("confirmation_token") !== -1 ||
-                 hash.indexOf("recovery_token") !== -1)) {
-      // Wait for the widget to load, then open it
-      var check = setInterval(function() {
-        if (window.netlifyIdentity) {
-          clearInterval(check);
-          window.netlifyIdentity.open();
-        }
-      }, 100);
-    }
-  })();
-</script>
+{{- /* Head custom content area */ -}}
