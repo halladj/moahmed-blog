@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#0d6efd" stroke="#0a58ca" stroke-width="2"/>
+  <text x="50" y="62" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">Rx</text>
+  <path d="M25 78 Q50 88 75 78" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

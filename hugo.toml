@@ -1,0 +1,93 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Dr. Mohamed | Pharmacist'
+theme = 'PaperMod'
+[pagination]
+  pagerSize = 6
+
+[params]
+  author = 'Dr. Mohamed'
+  description = 'Clinical Pharmacist — Blog & Portfolio'
+
+  [params.label]
+    text = 'Dr. Mohamed | Pharmacist'
+    iconSVG = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100" fill="currentColor"><path d="M20 55 C20 55 22 85 50 85 C78 85 80 55 80 55 Z" opacity="0.9"/><rect x="15" y="48" width="70" height="10" rx="5"/><line x1="62" y1="20" x2="42" y2="50" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="64" cy="18" r="6"/></svg>'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  showToc = true
+  TocOpen = false
+  defaultTheme = 'auto'
+  disableThemeToggle = false
+
+  [params.homeInfoParams]
+    Title = "Welcome"
+    Content = """
+Hello! I'm **Dr. Mohamed**, a clinical pharmacist passionate about patient care, \
+medication safety, and pharmaceutical innovation. Explore my blog for insights on \
+pharmacy practice, and check out my portfolio to see the projects I've been involved in.
+"""
+
+  [[params.socialIcons]]
+    name = 'email'
+    url = 'mailto:dr.mohamed@example.com'
+
+  [[params.socialIcons]]
+    name = 'linkedin'
+    url = 'https://linkedin.com/in/'
+
+  [[params.socialIcons]]
+    name = 'twitter'
+    url = 'https://twitter.com/'
+
+[params.cover]
+  hidden = false
+  hiddenInList = false
+  hiddenInSingle = true
+
+[params.assets]
+  favicon = '/favicon.svg'
+  favicon16x16 = '/favicon.svg'
+  favicon32x32 = '/favicon.svg'
+  apple_touch_icon = '/favicon.svg'
+  disableFingerprinting = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[menu.main]]
+  name = 'Blog'
+  url = '/blog/'
+  weight = 2
+
+[[menu.main]]
+  name = 'Portfolio'
+  url = '/portfolio/'
+  weight = 3
+
+[[menu.main]]
+  name = 'About'
+  url = '/about/'
+  weight = 4
+
+[[menu.main]]
+  name = 'Contact'
+  url = '/contact/'
+  weight = 5
+
+[[menu.main]]
+  name = 'Search'
+  url = '/search/'
+  weight = 6
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']

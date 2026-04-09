@@ -1,0 +1,81 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  # ── Blog Posts ──
+  - name: blog
+    label: "Blog Posts"
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime }
+      - { label: "Draft", name: draft, widget: boolean, default: false }
+      - { label: "Summary", name: summary, widget: text }
+      - { label: "Tags", name: tags, widget: list, allow_add: true, required: false }
+      - { label: "Categories", name: categories, widget: list, allow_add: true, required: false }
+      - { label: "Show Table of Contents", name: ShowToc, widget: boolean, default: true }
+      - { label: "Cover Image", name: cover, widget: object, required: false, fields: [
+          { label: "Image", name: image, widget: image, required: false },
+          { label: "Caption", name: caption, widget: string, required: false }
+        ]}
+      - { label: "Body", name: body, widget: markdown }
+
+  # ── Portfolio Projects ──
+  - name: portfolio
+    label: "Portfolio"
+    folder: content/portfolio
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime }
+      - { label: "Draft", name: draft, widget: boolean, default: false }
+      - { label: "Summary", name: summary, widget: text }
+      - { label: "Tags", name: tags, widget: list, allow_add: true, required: false }
+      - { label: "Categories", name: categories, widget: list, allow_add: true, required: false }
+      - { label: "Show Table of Contents", name: ShowToc, widget: boolean, default: true }
+      - { label: "Cover Image", name: cover, widget: object, required: false, fields: [
+          { label: "Image", name: image, widget: image, required: false },
+          { label: "Caption", name: caption, widget: string, required: false }
+        ]}
+      - { label: "Body", name: body, widget: markdown }
+
+  # ── Standalone Pages ──
+  - name: pages
+    label: "Pages"
+    files:
+      - label: "About"
+        name: about
+        file: content/about.md
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - { label: "Summary", name: summary, widget: string }
+          - { label: "Body", name: body, widget: markdown }
+
+      - label: "Contact"
+        name: contact
+        file: content/contact.md
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - { label: "Summary", name: summary, widget: string }
+          - { label: "Body", name: body, widget: markdown }
+
+  # ── Site Settings ──
+  - name: settings
+    label: "Settings"
+    files:
+      - label: "Site Configuration"
+        name: config
+        file: hugo.toml
+        extension: toml
+        fields:
+          - { label: "Site Title", name: title, widget: string }
+          - { label: "Base URL", name: baseURL, widget: string }

@@ -1,0 +1,29 @@
+/* Header layout: title left, menu center, dark toggle extreme right */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+#menu {
+    flex: 1;
+}
+
+/* Pharmacy icon sits inline next to the title text */
+.logo a svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* Dark toggle pinned to the far right */
+.theme-toggle-wrapper {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+/* Hide the old logo-switches container */
+.logo-switches {
+    display: none;
+}
