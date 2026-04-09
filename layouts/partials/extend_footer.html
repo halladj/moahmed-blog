@@ -1,5 +1,11 @@
 <script>
   if (window.netlifyIdentity) {
+    // Handle invite/recovery/confirmation tokens in the URL hash
+    var hash = window.location.hash;
+    if (hash.includes("invite_token") || hash.includes("confirmation_token") || hash.includes("recovery_token")) {
+      window.netlifyIdentity.open();
+    }
+
     window.netlifyIdentity.on("init", user => {
       if (!user) {
         window.netlifyIdentity.on("login", () => {
